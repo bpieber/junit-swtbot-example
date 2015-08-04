@@ -19,4 +19,17 @@
 		<sonar.sources></sonar.sources>
 		<sonar.tests>src</sonar.tests>
 	</properties>
+	<profiles>
+		<profile>
+			<id>macosx-jvm-flags</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<os-jvm-flags>-XstartOnFirstThread</os-jvm-flags>
+			</properties>
+		</profile>
+	</profiles>
 </project>
